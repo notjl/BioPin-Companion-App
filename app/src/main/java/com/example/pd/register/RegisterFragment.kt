@@ -8,9 +8,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.midterms.MainApplication
-import com.example.midterms.R
-import com.example.midterms.databinding.FragmentRegisterBinding
+import com.example.pd.MainApplication
+import com.example.pd.R
+import com.example.pd.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
     private val viewModel: RegisterViewModel by activityViewModels {

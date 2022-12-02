@@ -2,8 +2,8 @@ package com.example.pd.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.midterms.database.dao.UserDao
-import com.example.midterms.database.models.User
+import com.example.pd.database.dao.UserDao
+import com.example.pd.database.models.User
 
 class LoginViewModel(private val userDao: UserDao): ViewModel() {
     private fun getUser(username: String, password: String): User? = userDao.get(username, password)

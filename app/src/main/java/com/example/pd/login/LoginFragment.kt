@@ -8,10 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.midterms.MainApplication
-import com.example.midterms.R
-import com.example.midterms.databinding.FragmentLoginBinding
-import com.example.midterms.login.LoginViewModel
 import com.example.pd.MainApplication
 import com.example.pd.databinding.FragmentLoginBinding
 

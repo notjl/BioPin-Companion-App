@@ -2,8 +2,8 @@ package com.example.pd.register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.midterms.database.dao.UserDao
-import com.example.midterms.database.models.User
+import com.example.pd.database.dao.UserDao
+import com.example.pd.database.models.User
 
 class RegisterViewModel(private val userDao: UserDao): ViewModel() {
     private fun insertUser(user: User) {

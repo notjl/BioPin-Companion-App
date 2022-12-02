@@ -1,7 +1,6 @@
 package com.example.pd
 
 import android.app.Application
-import com.example.midterms.database.AppDatabase
 import com.example.pd.database.AppDatabase
 
 class MainApplication: Application() {
