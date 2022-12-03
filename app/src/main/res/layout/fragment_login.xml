@@ -7,7 +7,7 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipChildren="false"
@@ -21,9 +21,9 @@
             android:id="@+id/usernamelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="8dp">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,12 +35,9 @@
             android:id="@+id/passwordlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/usernamelayout"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
+            android:layout_margin="8dp">
+            <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,14 +47,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/passwordlayout">
 
-            <!--
-            <com.google.android.material.button.MaterialButton/>
-            TODO MAKE SURE TO BECOME MATERIAL
-            for some reason ayaw gumana smh
-
-            -->
             <Button
                 android:id="@+id/login_button"
                 android:text="Login"
@@ -75,6 +67,5 @@
                 android:layout_toLeftOf="@id/login_button"
                 />
         </RelativeLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

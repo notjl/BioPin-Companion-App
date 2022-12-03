@@ -16,14 +16,14 @@
             android:id="@+id/how"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="FAQ"
             android:textAlignment="center"
-            android:layout_marginTop="300dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:text="How to use:"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
