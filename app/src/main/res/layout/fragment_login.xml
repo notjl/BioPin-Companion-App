@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/imageLogo"
             android:layout_width="347dp"
-            android:layout_height="454dp"
+            android:layout_height="347dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="9dp"
             android:layout_marginTop="4dp"
@@ -79,6 +79,16 @@
                 android:layout_toLeftOf="@id/login_button"
                 />
         </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/nav_drawer"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
