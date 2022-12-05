@@ -4,6 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="mainFragment"
+            type="com.example.pd.pd.MainPdFragment" />
 
     </data>
 
@@ -13,45 +16,26 @@
         tools:context=".pd.MainPdFragment">
 
         <Button
-            android:id="@+id/create_button"
+            android:id="@+id/signal_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="250dp"
-            android:text="Create"
+            android:layout_marginTop="300dp"
+            android:text="Signal"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <Button
-            android:id="@+id/update_button"
+            android:id="@+id/api_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Update"
-            app:layout_constraintTop_toBottomOf="@id/create_button"
+            android:text="API"
+            app:layout_constraintTop_toBottomOf="@id/signal_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <Button
-            android:id="@+id/delete_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Delete"
-            app:layout_constraintTop_toBottomOf="@id/update_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/display_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Display"
-            app:layout_constraintTop_toBottomOf="@id/delete_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

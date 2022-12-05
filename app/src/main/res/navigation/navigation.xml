@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainPdFragment"
+            app:destination="@id/mainPdFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -32,4 +35,8 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.pd.menu.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mainPdFragment"
+        android:name="com.example.pd.pd.MainPdFragment"
+        android:label="MainPdFragment" />
 </navigation>

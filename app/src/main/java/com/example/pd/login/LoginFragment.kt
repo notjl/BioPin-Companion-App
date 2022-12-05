@@ -58,6 +58,8 @@ class LoginFragment : Fragment() {
         if (isEntryValid())
             if (userExist()) {
                 Toast.makeText(requireActivity(), "Login Success! Welcome ${binding.username.text}", Toast.LENGTH_LONG).show()
+                val action = LoginFragmentDirections.actionLoginFragmentToMainPdFragment()
+                findNavController().navigate(action)
             }
             else
                 Toast.makeText(requireActivity(), "User does not exist or wrong password", Toast.LENGTH_LONG).show()

@@ -11,5 +11,8 @@ data class Signal(
     val id: Int = 0,
 
     @NonNull @ColumnInfo
-    val signal: String
+    val signal: String,
+
+    @NonNull @ColumnInfo
+    val type: String,
 )
