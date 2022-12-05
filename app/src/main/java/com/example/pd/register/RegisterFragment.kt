@@ -38,6 +38,7 @@ class RegisterFragment : Fragment() {
         binding.registerButton.setOnClickListener {
             addNewUser()
         }
+        binding.cancelButton.setOnClickListener { goToLoginFragment() }
     }
 
     private fun isEntryValid(): Boolean {
@@ -80,5 +81,10 @@ class RegisterFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
+    }
+
+    private fun goToLoginFragment() {
+        val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+        findNavController().navigate(action)
     }
 }

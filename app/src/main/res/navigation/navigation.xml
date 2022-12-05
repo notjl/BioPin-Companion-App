@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/loginFragment">
 
@@ -38,5 +39,26 @@
     <fragment
         android:id="@+id/mainPdFragment"
         android:name="com.example.pd.pd.MainPdFragment"
-        android:label="MainPdFragment" />
+        android:label="MainPdFragment" >
+        <action
+            android:id="@+id/action_mainPdFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signalFragment"
+        android:name="com.example.pd.pd.crud.SignalFragment"
+        android:label="SignalFragment" >
+        <action
+            android:id="@+id/action_signalFragment_to_createSignalFragment"
+            app:destination="@id/createSignalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSignalFragment"
+        android:name="com.example.pd.pd.crud.CreateSignalFragment"
+        android:label="fragment_create_signal"
+        tools:layout="@layout/fragment_create_signal" >
+        <action
+            android:id="@+id/action_createSignalFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+    </fragment>
 </navigation>
