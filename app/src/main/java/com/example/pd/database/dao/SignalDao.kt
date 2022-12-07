@@ -1,8 +1,8 @@
 package com.example.pd.database.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.pd.database.models.Signal
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SignalDao {
@@ -16,5 +16,5 @@ interface SignalDao {
     fun delete(signal: Signal)
 
     @Query("SELECT * FROM Signal")
-    fun getAll(): List<Signal>
+    fun getAll(): Flow<List<Signal>>
 }

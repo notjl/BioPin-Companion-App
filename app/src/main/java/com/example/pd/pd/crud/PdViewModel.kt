@@ -1,10 +1,10 @@
 package com.example.pd.pd.crudmo
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.pd.database.dao.SignalDao
 import com.example.pd.database.models.Signal
+import kotlinx.coroutines.flow.Flow
 
 class PdViewModel(private val signalDao: SignalDao): ViewModel() {
     private fun insertSignal(signal: Signal) {
@@ -28,6 +28,8 @@ class PdViewModel(private val signalDao: SignalDao): ViewModel() {
             return false
         return true
     }
+
+    fun getAllSignal(): Flow<List<Signal>> = signalDao.getAll()
 }
 
 class PdViewModelFactory(private val signalDao: SignalDao): ViewModelProvider.Factory {
