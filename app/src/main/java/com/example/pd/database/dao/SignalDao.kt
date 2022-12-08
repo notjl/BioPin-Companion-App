@@ -17,4 +17,7 @@ interface SignalDao {
 
     @Query("SELECT * FROM Signal")
     fun getAll(): Flow<List<Signal>>
+
+    @Query("SELECT * FROM Signal WHERE id = :id")
+    fun getSignal(id: Int): Flow<Signal>
 }

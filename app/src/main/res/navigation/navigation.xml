@@ -51,6 +51,9 @@
         <action
             android:id="@+id/action_signalFragment_to_createSignalFragment"
             app:destination="@id/createSignalFragment" />
+        <action
+            android:id="@+id/action_signalFragment_to_updateSignalFragment"
+            app:destination="@id/updateSignalFragment" />
     </fragment>
     <fragment
         android:id="@+id/createSignalFragment"
@@ -60,5 +63,13 @@
         <action
             android:id="@+id/action_createSignalFragment_to_signalFragment"
             app:destination="@id/signalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSignalFragment"
+        android:name="com.example.pd.pd.crud.UpdateSignalFragment"
+        android:label="UpdateSignalFragment" >
+        <argument
+            android:name="signal_id"
+            app:argType="integer" />
     </fragment>
 </navigation>

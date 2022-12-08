@@ -11,10 +11,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.MainApplication
+import com.example.pd.database.models.Signal
 import com.example.pd.databinding.FragmentSignalBinding
 import com.example.pd.pd.crud.adapter.SignalAdapter
 import com.example.pd.pd.crudmo.PdViewModel
 import com.example.pd.pd.crudmo.PdViewModelFactory
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
 class SignalFragment : Fragment() {
@@ -43,7 +45,15 @@ class SignalFragment : Fragment() {
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        val signalAdapter: SignalAdapter = SignalAdapter()
+        val signalAdapter = SignalAdapter(
+            {
+                val action = SignalFragmentDirections.actionSignalFragmentToUpdateSignalFragment(it.id)
+                this.findNavController().navigate(action)
+            },
+            {
+                signal: Signal -> showConfirmationDialog(signal)
+            }
+        )
         recyclerView.adapter = signalAdapter
 
         lifecycle.coroutineScope.launch {
@@ -57,5 +67,19 @@ class SignalFragment : Fragment() {
     private fun goToCreateSignalFragment() {
         val action = SignalFragmentDirections.actionSignalFragmentToCreateSignalFragment()
         findNavController().navigate(action)
+    }
+
+    private fun showConfirmationDialog(signal: Signal) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(android.R.string.dialog_alert_title))
+            .setMessage("Are you sure you want to delete?")
+            .setCancelable(false)
+            .setNegativeButton("No") { _, _ -> }
+            .setPositiveButton("Yes") { _, _ -> deleteSignal(signal) }
+            .show()
+    }
+
+    private fun deleteSignal(signal: Signal) {
+        viewModel.deleteSignal(signal)
     }
 }
