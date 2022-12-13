@@ -1,4 +1,4 @@
-package com.example.pd.pd.crudmo
+package com.example.pd.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

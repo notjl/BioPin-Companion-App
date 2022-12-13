@@ -1,4 +1,4 @@
-package com.example.pd.pd.crud
+package com.example.pd.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,8 +13,6 @@ import androidx.navigation.fragment.navArgs
 import com.example.pd.MainApplication
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.FragmentUpdateSignalBinding
-import com.example.pd.pd.crudmo.PdViewModel
-import com.example.pd.pd.crudmo.PdViewModelFactory
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package com.example.pd.pd.crud.adapter
+package com.example.pd.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

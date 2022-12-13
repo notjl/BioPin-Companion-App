@@ -38,7 +38,7 @@
         android:label="SettingsFragment" />
     <fragment
         android:id="@+id/mainPdFragment"
-        android:name="com.example.pd.pd.MainPdFragment"
+        android:name="com.example.pd.main.MainPdFragment"
         android:label="MainPdFragment" >
         <action
             android:id="@+id/action_mainPdFragment_to_signalFragment"
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/signalFragment"
-        android:name="com.example.pd.pd.crud.SignalFragment"
+        android:name="com.example.pd.main.SignalFragment"
         android:label="SignalFragment" >
         <action
             android:id="@+id/action_signalFragment_to_createSignalFragment"
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/createSignalFragment"
-        android:name="com.example.pd.pd.crud.CreateSignalFragment"
+        android:name="com.example.pd.main.CreateSignalFragment"
         android:label="fragment_create_signal"
         tools:layout="@layout/fragment_create_signal" >
         <action
@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateSignalFragment"
-        android:name="com.example.pd.pd.crud.UpdateSignalFragment"
+        android:name="com.example.pd.main.UpdateSignalFragment"
         android:label="UpdateSignalFragment" >
         <argument
             android:name="signal_id"

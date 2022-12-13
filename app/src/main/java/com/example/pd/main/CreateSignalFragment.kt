@@ -1,4 +1,4 @@
-package com.example.pd.pd.crud
+package com.example.pd.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pd.MainApplication
 import com.example.pd.databinding.FragmentCreateSignalBinding
-import com.example.pd.pd.crudmo.PdViewModel
-import com.example.pd.pd.crudmo.PdViewModelFactory
 
 class CreateSignalFragment : Fragment() {
     private val viewModel: PdViewModel by activityViewModels {

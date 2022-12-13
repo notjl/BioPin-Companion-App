@@ -1,4 +1,4 @@
-package com.example.pd.pd
+package com.example.pd.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

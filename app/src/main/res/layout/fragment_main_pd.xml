@@ -6,14 +6,14 @@
     <data>
         <variable
             name="mainFragment"
-            type="com.example.pd.pd.MainPdFragment" />
+            type="com.example.pd.main.MainPdFragment" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".pd.MainPdFragment">
+        tools:context=".main.MainPdFragment">
 
         <Button
             android:id="@+id/signal_button"

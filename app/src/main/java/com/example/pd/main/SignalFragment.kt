@@ -1,4 +1,4 @@
-package com.example.pd.pd.crud
+package com.example.pd.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,9 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.MainApplication
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.FragmentSignalBinding
-import com.example.pd.pd.crud.adapter.SignalAdapter
-import com.example.pd.pd.crudmo.PdViewModel
-import com.example.pd.pd.crudmo.PdViewModelFactory
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
