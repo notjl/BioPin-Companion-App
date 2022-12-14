@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/loginFragment">
 
@@ -19,6 +20,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainPdFragment"
+            app:destination="@id/mainPdFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -29,7 +33,50 @@
         android:name="com.example.pd.menu.HomeFragment"
         android:label="Home" />
     <fragment
-        android:id="@+id/faqFragment"
-        android:name="com.example.pd.menu.FaqFragment"
-        android:label="Frequently Asked Questions" />
+        android:id="@+id/settingsFragment"
+        android:name="com.example.pd.menu.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mainPdFragment"
+        android:name="com.example.pd.main.MainPdFragment"
+        android:label="MainPdFragment" >
+        <action
+            android:id="@+id/action_mainPdFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+        <action
+            android:id="@+id/action_mainPdFragment_to_signalApiFragment"
+            app:destination="@id/signalApiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signalFragment"
+        android:name="com.example.pd.main.SignalFragment"
+        android:label="SignalFragment" >
+        <action
+            android:id="@+id/action_signalFragment_to_createSignalFragment"
+            app:destination="@id/createSignalFragment" />
+        <action
+            android:id="@+id/action_signalFragment_to_updateSignalFragment"
+            app:destination="@id/updateSignalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSignalFragment"
+        android:name="com.example.pd.main.CreateSignalFragment"
+        android:label="fragment_create_signal"
+        tools:layout="@layout/fragment_create_signal" >
+        <action
+            android:id="@+id/action_createSignalFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSignalFragment"
+        android:name="com.example.pd.main.UpdateSignalFragment"
+        android:label="UpdateSignalFragment" >
+        <argument
+            android:name="signal_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/signalApiFragment"
+        android:name="com.example.pd.main.SignalApiFragment"
+        android:label="SignalApiFragment" />
 </navigation>

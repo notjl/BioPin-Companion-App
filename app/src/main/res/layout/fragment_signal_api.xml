@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.pd.main.ApiViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="714dp"
+        tools:context=".main.SignalApiFragment">
+
+        <TextView
+            android:id="@+id/signal_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{viewModel.status}"
+            tools:text="Signal"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/graph_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/signal_status"
+            android:layout_marginTop="50dp"
+            android:data="@{viewModel.data}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
