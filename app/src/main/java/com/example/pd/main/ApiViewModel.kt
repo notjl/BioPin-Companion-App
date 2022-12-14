@@ -5,11 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pd.main.network.SignalApi
-import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.utils.Utils.init
 import kotlinx.coroutines.launch
 
 class ApiViewModel: ViewModel() {
@@ -17,7 +15,6 @@ class ApiViewModel: ViewModel() {
     val status: LiveData<String> = _status
 
     private val _signals = ArrayList<Entry>()
-    val signals: ArrayList<Entry> = _signals
 
     private val _data = MutableLiveData<LineData>()
     val data: LiveData<LineData> = _data
