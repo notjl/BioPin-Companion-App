@@ -43,6 +43,18 @@
                 tools:text="Brain"
                 />
 
+            <TextView
+                android:id="@+id/signal_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/signal_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="9dp"
+                android:layout_marginStart="5dp"
+                android:textAppearance="?textAppearanceBody2"
+                tools:text="(Left)"
+                />
+
             <Button
                 android:id="@+id/update_button"
                 android:layout_width="wrap_content"

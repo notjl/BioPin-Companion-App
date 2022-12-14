@@ -51,6 +51,12 @@ class UpdateSignalFragment : Fragment() {
                         "muscle" -> binding.muscleOption.id
                         else -> binding.eyesOption.id
                     })
+                    directionOption.check(when(it.direction) {
+                        "forward" -> binding.forwardOption.id
+                        "backward" -> binding.backwardOption.id
+                        "left" -> binding.leftOption.id
+                        else -> binding.rightOption.id
+                    })
                 }
             }
         }
@@ -73,6 +79,13 @@ class UpdateSignalFragment : Fragment() {
                     binding.brainOption.id -> "brain"
                     binding.muscleOption.id -> "muscle"
                     binding.eyesOption.id -> "eyes"
+                    else -> ""
+                },
+                direction = when(binding.directionOption.checkedRadioButtonId) {
+                    binding.forwardOption.id -> "forward"
+                    binding.backwardOption.id -> "backward"
+                    binding.leftOption.id -> "left"
+                    binding.rightOption.id -> "right"
                     else -> ""
                 }
             )

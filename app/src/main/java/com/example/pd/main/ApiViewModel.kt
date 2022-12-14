@@ -34,9 +34,9 @@ class ApiViewModel: ViewModel() {
                 }
 
                 val lineDataset = LineDataSet(_signals, "Signal")
-                lineDataset.circleRadius = 2f
+                lineDataset.circleRadius = 4f
                 lineDataset.valueTextSize = 10F
-                lineDataset.mode = LineDataSet.Mode.CUBIC_BEZIER
+//                lineDataset.mode = LineDataSet.Mode.CUBIC_BEZIER
                 _data.value = LineData(lineDataset)
             }
             catch (e: Exception) {

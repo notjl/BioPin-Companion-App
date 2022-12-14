@@ -20,9 +20,9 @@ class SignalAdapter(
     ): RecyclerView.ViewHolder(binding.root) {
         val signal = binding.signal
         val type = binding.signalType
+        val direction = binding.signalDirection
         val updateButton = binding.updateButton
         val deleteButton = binding.deleteButton
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SignalViewHolder {
@@ -40,6 +40,13 @@ class SignalAdapter(
         val item = getItem(position)
         holder.signal.text = item.signal.toString() + " Hz"
         holder.type.text = item.type.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        holder.direction.text = "(${
+            item.direction.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            }
+        } Direction)"
         holder.updateButton.setOnClickListener {
             onUpdateClicked(item)
         }

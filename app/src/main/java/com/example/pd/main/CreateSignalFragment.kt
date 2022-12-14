@@ -46,6 +46,13 @@ class CreateSignalFragment : Fragment() {
                     binding.muscleOption.id -> "muscle"
                     binding.eyesOption.id -> "eyes"
                     else -> ""
+                },
+                direction = when (binding.directionOption.checkedRadioButtonId) {
+                    binding.forwardOption.id -> "forward"
+                    binding.backwardOption.id -> "backward"
+                    binding.leftOption.id -> "left"
+                    binding.rightOption.id -> "right"
+                    else -> ""
                 }
             )
             findNavController().navigateUp()
