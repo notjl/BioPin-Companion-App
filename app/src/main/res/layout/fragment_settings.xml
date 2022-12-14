@@ -19,7 +19,7 @@
             android:textAlignment="center"
             android:layout_marginTop="300dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:text="How to use:"
+            android:text="@string/how_to_use"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create = Create Brain Signal / Direction\nUpdate = Update Brain Signal / Direction\nDelete = Delete Brain Signal / Direction\nDsiplay = Display All Brain Signal / Direction"
+            android:text="@string/create_create_brain_signal_direction_nupdate_update_brain_signal_direction_ndelete_delete_brain_signal_direction_ndsiplay_display_all_brain_signal_direction"
             android:padding="4dp"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@id/how"

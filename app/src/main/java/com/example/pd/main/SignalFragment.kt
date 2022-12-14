@@ -55,7 +55,7 @@ class SignalFragment : Fragment() {
         recyclerView.adapter = signalAdapter
 
         lifecycle.coroutineScope.launch {
-            viewModel.getAllSignal().collect() {
+            viewModel.getAllSignal().collect {
                 signalAdapter.submitList(it)
             }
         }
