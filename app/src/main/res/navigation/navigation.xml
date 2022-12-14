@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_mainPdFragment_to_signalFragment"
             app:destination="@id/signalFragment" />
+        <action
+            android:id="@+id/action_mainPdFragment_to_signalApiFragment"
+            app:destination="@id/signalApiFragment" />
     </fragment>
     <fragment
         android:id="@+id/signalFragment"
@@ -72,4 +75,8 @@
             android:name="signal_id"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/signalApiFragment"
+        android:name="com.example.pd.main.SignalApiFragment"
+        android:label="SignalApiFragment" />
 </navigation>
