@@ -33,9 +33,9 @@
         android:name="com.example.pd.menu.HomeFragment"
         android:label="Home" />
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.pd.menu.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:id="@+id/faqFragment"
+        android:name="com.example.pd.menu.FaqFragment"
+        android:label="FAQ" />
     <fragment
         android:id="@+id/mainPdFragment"
         android:name="com.example.pd.main.MainPdFragment"

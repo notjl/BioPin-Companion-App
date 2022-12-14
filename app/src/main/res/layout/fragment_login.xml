@@ -75,20 +75,11 @@
                 android:text="Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
                 android:layout_toStartOf="@id/login_button"
                 android:layout_toLeftOf="@id/login_button"
                 />
         </RelativeLayout>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/nav_drawer"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
