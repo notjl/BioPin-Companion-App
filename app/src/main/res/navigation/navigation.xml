@@ -39,7 +39,7 @@
     <fragment
         android:id="@+id/mainPdFragment"
         android:name="com.example.pd.main.MainPdFragment"
-        android:label="MainPdFragment" >
+        android:label="Home">
         <action
             android:id="@+id/action_mainPdFragment_to_signalFragment"
             app:destination="@id/signalFragment" />
@@ -50,7 +50,7 @@
     <fragment
         android:id="@+id/signalFragment"
         android:name="com.example.pd.main.SignalFragment"
-        android:label="SignalFragment" >
+        android:label="Signal List">
         <action
             android:id="@+id/action_signalFragment_to_createSignalFragment"
             app:destination="@id/createSignalFragment" />
@@ -61,8 +61,8 @@
     <fragment
         android:id="@+id/createSignalFragment"
         android:name="com.example.pd.main.CreateSignalFragment"
-        android:label="fragment_create_signal"
-        tools:layout="@layout/fragment_create_signal" >
+        android:label="Create Signal"
+        tools:layout="@layout/fragment_create_signal">
         <action
             android:id="@+id/action_createSignalFragment_to_signalFragment"
             app:destination="@id/signalFragment" />
@@ -70,7 +70,7 @@
     <fragment
         android:id="@+id/updateSignalFragment"
         android:name="com.example.pd.main.UpdateSignalFragment"
-        android:label="UpdateSignalFragment" >
+        android:label="Update Signal">
         <argument
             android:name="signal_id"
             app:argType="integer" />
@@ -78,5 +78,5 @@
     <fragment
         android:id="@+id/signalApiFragment"
         android:name="com.example.pd.main.SignalApiFragment"
-        android:label="SignalApiFragment" />
+        android:label="Signal API" />
 </navigation>
