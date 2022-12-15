@@ -1,5 +1,6 @@
-package com.example.pd.main
+package com.example.pd.main.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.SignalItemBinding
+import java.util.*
 
 class SignalAdapter(
     private var onUpdateClicked: (Signal) -> Unit,
@@ -14,13 +16,13 @@ class SignalAdapter(
 ): ListAdapter<Signal, SignalAdapter.SignalViewHolder>(DiffCallback) {
 
     class SignalViewHolder(
-        private var binding: SignalItemBinding
+        binding: SignalItemBinding
     ): RecyclerView.ViewHolder(binding.root) {
         val signal = binding.signal
         val type = binding.signalType
+        val direction = binding.signalDirection
         val updateButton = binding.updateButton
         val deleteButton = binding.deleteButton
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SignalViewHolder {
@@ -33,10 +35,18 @@ class SignalAdapter(
         )
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: SignalViewHolder, position: Int) {
         val item = getItem(position)
         holder.signal.text = item.signal.toString() + " Hz"
-        holder.type.text = item.type.capitalize()
+        holder.type.text = item.type.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        holder.direction.text = "(${
+            item.direction.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            }
+        } Direction)"
         holder.updateButton.setOnClickListener {
             onUpdateClicked(item)
         }

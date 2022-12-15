@@ -14,36 +14,40 @@ class PdViewModel(private val signalDao: SignalDao): ViewModel() {
         signalDao.update(signal)
     }
 
-    private fun getNewSignalEntry(signal: Int, type: String): Signal {
+    private fun getNewSignalEntry(signal: Int, type: String, direction: String): Signal {
         return Signal(
             signal = signal,
-            type = type
+            type = type,
+            direction = direction
         )
     }
 
     private fun getUpdatedSignalEntry(
         id: Int,
         signal: Int,
-        type: String
+        type: String,
+        direction: String
     ): Signal {
         return Signal(
             id = id,
             signal = signal,
-            type = type
+            type = type,
+            direction = direction
         )
     }
 
-    fun addNewSignal(signal: Int, type: String) {
-        val newSignal = getNewSignalEntry(signal, type)
+    fun addNewSignal(signal: Int, type: String, direction: String) {
+        val newSignal = getNewSignalEntry(signal, type, direction)
         insertSignal(newSignal)
     }
 
     fun updateExistingSignal(
         id: Int,
         signal: Int,
-        type: String
+        type: String,
+        direction: String,
     ) {
-        val updatedSignal: Signal = getUpdatedSignalEntry(id, signal, type)
+        val updatedSignal: Signal = getUpdatedSignalEntry(id, signal, type, direction)
         updateSignal(updatedSignal)
     }
 

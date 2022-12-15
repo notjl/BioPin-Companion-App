@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.example.pd.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
+
+        val bottomNavigationView = findViewById<BottomNavigationView
+                >(R.id.bottom_navigation_view)
+        val navController2 = findNavController(R.id.myNavHostFragment)
+        bottomNavigationView.setupWithNavController(navController2)
     }
 
     override fun onSupportNavigateUp(): Boolean {

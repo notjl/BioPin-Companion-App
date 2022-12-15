@@ -21,13 +21,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/biopin_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="A localized solution for motorized wheelchairs catered to patients with severe motor and dexterity problems with a biopotential control system that enables independent mobility of the patients."
+            android:text="@string/a_localized_solution_for_motorized_wheelchairs_catered_to_patients_with_severe_motor_and_dexterity_problems_with_a_biopotential_control_system_that_enables_independent_mobility_of_the_patients"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
