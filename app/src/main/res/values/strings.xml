@@ -2,7 +2,7 @@
     <string name="app_name">PD</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="angel_cabezas_notjl">Angel Cabezas (notjl)</string>
+    <string name="team_10">TEAM 10</string>
     <string name="this_android_project_is_created_according_to_the_needs_of_the_team_10_project_design">This android project is created according to the needs of the Team 10 Project Design</string>
     <string name="signal_hz">Signal (Hz)</string>
     <string name="signal_type">Signal Type</string>

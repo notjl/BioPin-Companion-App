@@ -46,7 +46,7 @@ class RegisterFragment : Fragment() {
 
                 override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                     return when (menuItem.itemId) {
-                        R.id.settingsFragment -> {
+                        R.id.faqFragment -> {
                             val action = RegisterFragmentDirections.actionRegisterFragmentToSettingsFragment()
                             findNavController().navigate(action)
                             true
