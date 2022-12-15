@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pd.MainApplication
+import com.example.pd.R
 import com.example.pd.databinding.FragmentCreateSignalBinding
 
 class CreateSignalFragment : Fragment() {
@@ -57,8 +58,9 @@ class CreateSignalFragment : Fragment() {
             )
             findNavController().navigateUp()
         }
-        else
-            Toast.makeText(requireActivity(), "Missing information", Toast.LENGTH_LONG).show()
+        else {
+            binding.textlayout.error = getString(R.string.missing_info)
+        }
     }
 
     private fun isEntryValid(): Boolean {

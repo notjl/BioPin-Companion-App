@@ -58,20 +58,40 @@ class RegisterFragment : Fragment() {
     }
 
     private fun addNewUser() {
+
         if (isEntryValid())
             if (isPasswordSimilar()) {
                 viewModel.addNewUser(
                     username = binding.username.text.toString(),
                     password = binding.password.text.toString()
                 )
+                binding.confirmpasswordlayout.error= null
                 Toast.makeText(requireActivity(), "Added ${binding.username.text}", Toast.LENGTH_LONG).show()
                 val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
                 findNavController().navigate(action)
             }
-            else
-                Toast.makeText(requireActivity(), "Password is not the same", Toast.LENGTH_LONG).show()
-        else
-            Toast.makeText(requireActivity(), "Missing information", Toast.LENGTH_LONG).show()
+            else {
+                binding.confirmpasswordlayout.error = getString(R.string.password_unidentical)
+                binding.passwordlayout.error= null
+                binding.usernamelayout.error = null
+            }
+        else {
+            var username = binding.username.text.toString()
+            var password = binding.password.text.toString()
+            if(username.isEmpty()) {
+                binding.usernamelayout.error = getString(R.string.missing_info)
+                binding.passwordlayout.error= null
+                binding.confirmpasswordlayout.error = null
+            } else if (password.isEmpty()) {
+                binding.passwordlayout.error = getString(R.string.missing_info)
+                binding.usernamelayout.error = null
+                binding.confirmpasswordlayout.error= null
+            } else {
+                binding.confirmpasswordlayout.error = getString(R.string.missing_info)
+                binding.passwordlayout.error= null
+                binding.usernamelayout.error = null
+            }
+        }
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

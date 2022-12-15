@@ -1,6 +1,8 @@
 package com.example.pd.login
 
 import android.os.Bundle
+import android.text.Editable
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pd.MainApplication
+import com.example.pd.R
 import com.example.pd.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -54,16 +57,31 @@ class LoginFragment : Fragment() {
         )
     }
 
+
+
     private fun login() {
         if (isEntryValid())
             if (userExist()) {
-                Toast.makeText(requireActivity(), "Login Success! Welcome ${binding.username.text}", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    requireActivity(),
+                    "Login Success! Welcome ${binding.username.text}",
+                    Toast.LENGTH_LONG
+                ).show()
                 val action = LoginFragmentDirections.actionLoginFragmentToMainPdFragment()
                 findNavController().navigate(action)
+            } else {
+                binding.usernamelayout.error = null
+                binding.passwordlayout.error = getString(R.string.error_password)
             }
-            else
-                Toast.makeText(requireActivity(), "User does not exist or wrong password", Toast.LENGTH_LONG).show()
-        else
-            Toast.makeText(requireActivity(), "Missing information", Toast.LENGTH_LONG).show()
+        else {
+            var username = binding.username.text.toString()
+            if (username.isEmpty()) {
+                binding.usernamelayout.error = getString(R.string.missing_info)
+                binding.passwordlayout.error = null
+            } else {
+                binding.passwordlayout.error = getString(R.string.missing_info)
+                binding.usernamelayout.error = null
+            }
+        }
     }
 }
