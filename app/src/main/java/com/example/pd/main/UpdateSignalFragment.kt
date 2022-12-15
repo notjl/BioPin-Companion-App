@@ -32,7 +32,7 @@ class UpdateSignalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentUpdateSignalBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -43,13 +43,19 @@ class UpdateSignalFragment : Fragment() {
         val id = navigationArgs.signalId
 
         lifecycle.coroutineScope.launch {
-            getSignal(id).collect() {
-                binding?.apply {
+            getSignal(id).collect {
+                binding.apply {
                     signalEdit.setText(it.signal.toString())
                     signalOption.check(when(it.type) {
                         "brain" -> binding.brainOption.id
                         "muscle" -> binding.muscleOption.id
                         else -> binding.eyesOption.id
+                    })
+                    directionOption.check(when(it.direction) {
+                        "forward" -> binding.forwardOption.id
+                        "backward" -> binding.backwardOption.id
+                        "left" -> binding.leftOption.id
+                        else -> binding.rightOption.id
                     })
                 }
             }
@@ -73,6 +79,13 @@ class UpdateSignalFragment : Fragment() {
                     binding.brainOption.id -> "brain"
                     binding.muscleOption.id -> "muscle"
                     binding.eyesOption.id -> "eyes"
+                    else -> ""
+                },
+                direction = when(binding.directionOption.checkedRadioButtonId) {
+                    binding.forwardOption.id -> "forward"
+                    binding.backwardOption.id -> "backward"
+                    binding.leftOption.id -> "left"
+                    binding.rightOption.id -> "right"
                     else -> ""
                 }
             )

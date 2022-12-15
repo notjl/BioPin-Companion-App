@@ -25,7 +25,7 @@ class CreateSignalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCreateSignalBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -45,6 +45,13 @@ class CreateSignalFragment : Fragment() {
                     binding.brainOption.id -> "brain"
                     binding.muscleOption.id -> "muscle"
                     binding.eyesOption.id -> "eyes"
+                    else -> ""
+                },
+                direction = when (binding.directionOption.checkedRadioButtonId) {
+                    binding.forwardOption.id -> "forward"
+                    binding.backwardOption.id -> "backward"
+                    binding.leftOption.id -> "left"
+                    binding.rightOption.id -> "right"
                     else -> ""
                 }
             )

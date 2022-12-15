@@ -20,9 +20,6 @@ private val retrofit = Retrofit.Builder()
 interface SignalApiService {
     @GET("/")
     suspend fun getSignal(): List<SignalData>
-
-    @GET("/")
-    fun getSignalSync(): List<SignalData>
 }
 
 object SignalApi {

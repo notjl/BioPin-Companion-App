@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.MainApplication
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.FragmentSignalBinding
+import com.example.pd.main.adapter.SignalAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
@@ -32,7 +33,7 @@ class SignalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignalBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -54,7 +55,7 @@ class SignalFragment : Fragment() {
         recyclerView.adapter = signalAdapter
 
         lifecycle.coroutineScope.launch {
-            viewModel.getAllSignal().collect() {
+            viewModel.getAllSignal().collect {
                 signalAdapter.submitList(it)
             }
         }

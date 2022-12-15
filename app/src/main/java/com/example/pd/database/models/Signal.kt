@@ -15,4 +15,7 @@ data class Signal(
 
     @NonNull @ColumnInfo
     val type: String,
+
+    @NonNull @ColumnInfo
+    val direction: String,
 )
