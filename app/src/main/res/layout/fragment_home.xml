@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".menu.HomeFragment">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
             android:layout_width="276dp"
             android:layout_height="161dp"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="@string/biopin_logo" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"

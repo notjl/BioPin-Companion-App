@@ -19,13 +19,13 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background=" #00796B"
+            android:background=" #00B4D8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -37,30 +37,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
-        
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/signal_button"
-            android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/signal"
-            app:layout_constraintEnd_toEndOf="parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/intro"
+            android:layout_marginTop="120dp"
+            android:gravity="center">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/api_button"
-            android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/api"
-            app:layout_constraintTop_toBottomOf="@id/signal_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signal_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signal" />
 
-        <TextView
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/api_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/signal_button"
+                android:text="@string/api" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/intro"
             android:layout_width="274dp"
             android:layout_height="155dp"
@@ -74,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/biopin_title" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/biopin_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView3"
             android:layout_width="274dp"
             android:layout_height="80dp"

@@ -17,7 +17,7 @@
         android:paddingTop="16dp"
         tools:context=".login.LoginFragment">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageLogo"
             android:layout_width="347dp"
             android:layout_height="347dp"
