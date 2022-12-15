@@ -14,7 +14,7 @@
         android:layout_height="714dp"
         tools:context=".main.SignalApiFragment">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/signal_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
