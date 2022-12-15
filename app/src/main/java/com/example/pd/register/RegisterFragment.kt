@@ -36,32 +36,6 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val menuHost: MenuHost = requireActivity()
-
-        menuHost.addMenuProvider(
-            object: MenuProvider {
-                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                    menuInflater.inflate(R.menu.options_menu, menu)
-                }
-
-                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                    return when (menuItem.itemId) {
-                        R.id.faqFragment -> {
-                            val action = RegisterFragmentDirections.actionRegisterFragmentToSettingsFragment()
-                            findNavController().navigate(action)
-                            true
-                        }
-                        R.id.aboutFragment -> {
-                            val action = RegisterFragmentDirections.actionRegisterFragmentToAboutFragment()
-                            findNavController().navigate(action)
-                            true
-                        }
-                        else -> false
-                    }
-                }
-            }, viewLifecycleOwner, Lifecycle.State.RESUMED
-        )
-
         binding.registerButton.setOnClickListener {
             addNewUser()
         }
