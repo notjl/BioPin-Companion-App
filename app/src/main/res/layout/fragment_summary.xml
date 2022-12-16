@@ -39,7 +39,7 @@
                     android:gravity="center"
                     android:textSize="48dp"
                     tools:text="8 Hz"
-                    android:text="@{viewModel.hertz.toString()}" />
+                    />
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/type_summary"
                     android:layout_width="100dp"

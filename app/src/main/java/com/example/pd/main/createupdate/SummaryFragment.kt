@@ -44,6 +44,7 @@ class SummaryFragment : Fragment() {
         binding.apply {
             viewModel = pdViewModel
             lifecycleOwner = viewLifecycleOwner
+            hertz.text = pdViewModel.hertz.value.toString() + "Hz"
             when (pdViewModel.type.value) {
                 "brain" -> {
                     typeSummary.setImageResource(R.drawable.eegxicon)
