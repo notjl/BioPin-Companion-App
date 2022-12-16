@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BioPin Companion</string>
-    <string name="header_name"></string>
+    <string name="header_name">BioPin Companion</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_password">User does not exist or wrong password</string>
