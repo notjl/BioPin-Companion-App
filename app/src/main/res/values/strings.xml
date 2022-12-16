@@ -39,4 +39,6 @@
     <string name="create_signal">CREATE SIGNAL</string>
     <string name="username_greet">Welcome! %s</string>
     <string name="or">OR</string>
+    <string name="first_name">First Name</string>
+    <string name="surname">Surname</string>
 </resources>
