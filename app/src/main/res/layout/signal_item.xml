@@ -27,10 +27,9 @@
                 android:id="@+id/signal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-
-                android:layout_marginTop="44dp"
+                android:layout_marginStart="28dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="6 Hz" />
@@ -40,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 app:layout_constraintStart_toEndOf="@+id/signal"
@@ -52,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 app:layout_constraintStart_toEndOf="@+id/signal"
                 app:layout_constraintTop_toBottomOf="@+id/signal_type"
@@ -62,7 +62,7 @@
                 android:id="@+id/update_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/update"
                 app:layout_constraintStart_toEndOf="@+id/signal"
@@ -72,9 +72,9 @@
                 android:id="@+id/delete_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+
                 android:layout_marginStart="8dp"
-
-
                 android:layout_marginTop="4dp"
                 android:text="@string/delete"
                 app:layout_constraintStart_toEndOf="@+id/update_button"
