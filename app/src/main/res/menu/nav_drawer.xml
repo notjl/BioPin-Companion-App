@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/homeFragment"
         android:title="@string/home" />
+    <item
+        android:id="@+id/signalFragment"
+        android:title="Signal List" />
+    <item
+        android:id="@+id/SignalApiFragment"
+        android:title="Signal API" />
     <item
         android:id="@+id/faqFragment"
         android:title="@string/settings" />

@@ -4,6 +4,12 @@
         android:id="@+id/homeFragment"
         android:title="@string/home" />
     <item
+        android:id="@+id/signalFragment"
+        android:title="Signal List" />
+    <item
+        android:id="@+id/SignalApiFragment"
+        android:title="Signal API" />
+    <item
         android:id="@+id/faqFragment"
         android:title="@string/settings" />
     <item

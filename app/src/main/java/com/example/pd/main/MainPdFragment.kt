@@ -40,4 +40,5 @@ class MainPdFragment : Fragment() {
         findNavController().navigate(action)
 
     }
+
 }
