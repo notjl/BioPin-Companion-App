@@ -12,4 +12,5 @@
     <color name="threefive">#00B4D8</color>
     <color name="fourfive">#90E0EF</color>
     <color name="fivefive">#CAF0F8</color>
+    <color name="transparent">#00000000</color>
 </resources>
