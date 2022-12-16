@@ -15,15 +15,8 @@
         android:layout_height="match_parent"
         tools:context=".main.MainPdFragment">
 
-<!--        <View-->
-<!--            android:id="@+id/view"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="300dp"-->
-<!--            android:background=" #00B4D8"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
 
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -47,7 +40,7 @@
             android:src="@drawable/wave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toBottomOf="parent"
              />
 
         <com.google.android.material.imageview.ShapeableImageView
