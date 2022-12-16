@@ -10,20 +10,22 @@ class RegisterViewModel(private val userDao: UserDao): ViewModel() {
         userDao.insert(user)
     }
 
-    private fun getNewUserEntry(username: String, password: String): User {
+    private fun getNewUserEntry(username: String, password: String, firstName: String, surname: String): User {
         return User(
+            firstName = firstName,
+            surname = surname,
             username = username,
             password = password
         )
     }
 
-    fun addNewUser(username: String, password: String) {
-        val newUser = getNewUserEntry(username, password)
+    fun addNewUser(username: String, password: String, firstName: String, surname: String) {
+        val newUser = getNewUserEntry(username, password, firstName, surname)
         insertUser(newUser)
     }
 
-    fun isEntryValid(username: String, password: String, confirmPassword: String): Boolean {
-        if (username.isBlank() || password.isBlank() || confirmPassword.isBlank())
+    fun isEntryValid(username: String, firstName: String, surname: String, password: String, confirmPassword: String): Boolean {
+        if (username.isBlank() || password.isBlank() || confirmPassword.isBlank() || firstName.isBlank() || surname.isBlank())
             return false
         return true
     }
