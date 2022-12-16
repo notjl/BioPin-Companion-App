@@ -4,10 +4,11 @@ import  android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.example.pd.MainApplication
 import com.example.pd.R
 import com.example.pd.databinding.FragmentRegisterBinding
@@ -26,9 +27,9 @@ class RegisterFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -38,6 +39,7 @@ class RegisterFragment : Fragment() {
         binding.registerButton.setOnClickListener {
             addNewUser()
         }
+        binding.cancelButton.setOnClickListener { goToLoginFragment() }
     }
 
     private fun isEntryValid(): Boolean {
@@ -56,29 +58,54 @@ class RegisterFragment : Fragment() {
     }
 
     private fun addNewUser() {
+
         if (isEntryValid())
             if (isPasswordSimilar()) {
                 viewModel.addNewUser(
                     username = binding.username.text.toString(),
                     password = binding.password.text.toString()
                 )
+                binding.confirmpasswordlayout.error= null
                 Toast.makeText(requireActivity(), "Added ${binding.username.text}", Toast.LENGTH_LONG).show()
                 val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
                 findNavController().navigate(action)
             }
-            else
-                Toast.makeText(requireActivity(), "Password is not the same", Toast.LENGTH_LONG).show()
-        else
-            Toast.makeText(requireActivity(), "Missing information", Toast.LENGTH_LONG).show()
+            else {
+                binding.confirmpasswordlayout.error = getString(R.string.password_unidentical)
+                binding.passwordlayout.error= null
+                binding.usernamelayout.error = null
+            }
+        else {
+            var username = binding.username.text.toString()
+            var password = binding.password.text.toString()
+            if(username.isEmpty()) {
+                binding.usernamelayout.error = getString(R.string.missing_info)
+                binding.passwordlayout.error= null
+                binding.confirmpasswordlayout.error = null
+            } else if (password.isEmpty()) {
+                binding.passwordlayout.error = getString(R.string.missing_info)
+                binding.usernamelayout.error = null
+                binding.confirmpasswordlayout.error= null
+            } else {
+                binding.confirmpasswordlayout.error = getString(R.string.missing_info)
+                binding.passwordlayout.error= null
+                binding.usernamelayout.error = null
+            }
+        }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.options_menu, menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        super.onCreateOptionsMenu(menu, inflater)
+//        inflater.inflate(R.menu.options_menu, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+//                || super.onOptionsItemSelected(item)
+//    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+    private fun goToLoginFragment() {
+        val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+        findNavController().navigate(action)
     }
 }

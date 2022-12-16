@@ -20,7 +20,7 @@
             android:layout_marginTop="150dp"
             android:gravity="center">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageLogo1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/biomotive_logo" />
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageLogo2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"

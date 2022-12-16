@@ -2,4 +2,38 @@
     <string name="app_name">PD</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_password">User does not exist or wrong password</string>
+    <string name="missing_info">Missing Information</string>
+    <string name="password_unidentical">Password are not the same</string>
+    <string name="team_10">TEAM 10</string>
+    <string name="this_android_project_is_created_according_to_the_needs_of_the_team_10_project_design">This android project is created according to the needs of the Team 10 Project Design</string>
+    <string name="signal_hz">Signal (Hz)</string>
+    <string name="signal_type">Signal Type</string>
+    <string name="brain">Brain</string>
+    <string name="muscle">Muscle</string>
+    <string name="eyes">Eyes</string>
+    <string name="direction">Direction</string>
+    <string name="forward">Forward</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="backward">Backward</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="a_localized_solution_for_motorized_wheelchairs_catered_to_patients_with_severe_motor_and_dexterity_problems_with_a_biopotential_control_system_that_enables_independent_mobility_of_the_patients">A localized solution for motorized wheelchairs catered to patients with severe motor and dexterity problems with a biopotential control system that enables independent mobility of the patients.</string>
+    <string name="biopin_logo">BIOPIN LOGO</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="signal">Signal</string>
+    <string name="api">API</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="how_to_use">How to use:</string>
+    <string name="create_create_brain_signal_direction_nupdate_update_brain_signal_direction_ndelete_delete_brain_signal_direction_ndsiplay_display_all_brain_signal_direction">Create = Create Brain Signal / Direction\nUpdate = Update Brain Signal / Direction\nDelete = Delete Brain Signal / Direction\nDsiplay = Display All Brain Signal / Direction</string>
+    <string name="create">Create</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="home">Home</string>
+    <string name="settings">FAQ</string>
+    <string name="about">About</string>
 </resources>

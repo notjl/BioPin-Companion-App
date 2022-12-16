@@ -54,9 +54,16 @@ dependencies {
 
     implementation "androidx.room:room-runtime:$room_version"
 
+    implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
+
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // GraphView
+    // implementation 'com.jjoe64:graphview:4.2.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
-    api 'com.google.android.material:material:1.1.0-alpha06'
 }
