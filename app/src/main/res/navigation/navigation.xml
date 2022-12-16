@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/signalFragment">
 
     <fragment
         android:id="@+id/registerFragment"
@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_signalFragment_to_updateSignalFragment"
             app:destination="@id/updateSignalFragment" />
+        <action
+            android:id="@+id/action_signalFragment_to_hertzFragment"
+            app:destination="@id/hertzFragment" />
     </fragment>
     <fragment
         android:id="@+id/createSignalFragment"
@@ -93,4 +96,52 @@
         android:id="@+id/signalApiFragment"
         android:name="com.example.pd.main.SignalApiFragment"
         />
+    <fragment
+        android:id="@+id/hertzFragment"
+        android:name="com.example.pd.main.createupdate.HertzFragment"
+        >
+        <argument
+            android:name="signal_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_hertzFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.pd.main.createupdate.TypeFragment"
+        >
+        <argument
+            android:name="signal_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_typeFragment_to_directionFragment"
+            app:destination="@id/directionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directionFragment"
+        android:name="com.example.pd.main.createupdate.DirectionFragment"
+        tools:layout="@layout/fragment_direction">
+        <argument
+            android:name="signal_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_directionFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.pd.main.createupdate.SummaryFragment"
+        >
+        <argument
+            android:name="signal_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_summaryFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+    </fragment>
 </navigation>

@@ -1,11 +1,37 @@
 package com.example.pd.main
 
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.pd.database.dao.SignalDao
 import com.example.pd.database.models.Signal
 import kotlinx.coroutines.flow.Flow
 
 class PdViewModel(private val signalDao: SignalDao): ViewModel() {
+
+    private val _hertz = MutableLiveData<Int>()
+    val hertz: LiveData<Int> = _hertz
+
+    private val _type = MutableLiveData<String>()
+    val type: LiveData<String> = _type
+
+    private val _direction = MutableLiveData<String>()
+    val direction: LiveData<String> = _direction
+
+    fun setHertz(signalHertz: Int) {
+        _hertz.value = signalHertz
+        Log.d("setHertz", hertz.value.toString())
+    }
+
+    fun setType(signalType: String) {
+        _type.value = signalType
+        Log.d("setType", type.value.toString())
+    }
+
+    fun setDirection(signalDirection: String) {
+        _direction.value = signalDirection
+        Log.d("setDirection", direction.value.toString())
+    }
+
     private fun insertSignal(signal: Signal) {
         signalDao.insert(signal)
     }
