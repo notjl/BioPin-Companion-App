@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.pd.register.RegisterFragment"
-        android:label="Register">
+        >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -78,7 +78,7 @@
     <fragment
         android:id="@+id/updateSignalFragment"
         android:name="com.example.pd.main.UpdateSignalFragment"
-        android:label="Update Signal">
+        >
         <argument
             android:name="signal_id"
             app:argType="integer" />
