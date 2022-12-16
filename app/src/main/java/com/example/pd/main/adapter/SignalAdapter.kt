@@ -43,18 +43,44 @@ class SignalAdapter(
     override fun onBindViewHolder(holder: SignalViewHolder, position: Int) {
         val item = getItem(position)
         holder.signal.text = item.signal.toString() + " Hz"
-        holder.type.text = item.type.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
-        holder.direction.text = "(${
-            item.direction.replaceFirstChar {
-                if (it.isLowerCase()) it.titlecase(
-                    Locale.getDefault()
-                ) else it.toString()
-            }
-        } Direction)"
+        holder.cardView.setCardBackgroundColor(Color.parseColor("#82E7E8"))
+//         holder.type.text = item.type.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+//        holder.direction.text = "(${
+//            item.direction.replaceFirstChar {
+//                if (it.isLowerCase()) it.titlecase(
+//                    Locale.getDefault()
+//                ) else it.toString()
+//            }
+//        } Direction)"
+
         when (item.type) {
-            "brain" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#82E7E8"))
-            "muscle" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#8FB9AA"))
-            "eyes" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#ED8975"))
+            "brain" -> {
+
+                holder.type.setImageResource(R.drawable.eegxicon)
+            }
+            "muscle" -> {
+                //holder.cardView.setCardBackgroundColor(Color.parseColor("#82E7E8"))
+                holder.type.setImageResource(R.drawable.emgxicon)
+            }
+            "eyes" -> {
+                //holder.cardView.setCardBackgroundColor(Color.parseColor("#82E7E8"))
+                holder.type.setImageResource(R.drawable.eogxicon)
+            }
+        }
+
+        when (item.direction) {
+            "right" -> {
+                holder.direction.setImageResource(R.drawable.rightx16)
+            }
+            "left" -> {
+                holder.direction.setImageResource(R.drawable.leftx16)
+            }
+            "backward" -> {
+                holder.direction.setImageResource(R.drawable.downx16)
+            }
+            "forward" -> {
+                holder.direction.setImageResource(R.drawable.upx16)
+            }
         }
 
         holder.updateButton.setOnClickListener {
