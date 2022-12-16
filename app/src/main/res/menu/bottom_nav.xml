@@ -6,9 +6,11 @@
         android:title="@string/home" />
     <item
         android:id="@+id/signalFragment"
+        android:icon="@android:drawable/ic_menu_edit"
         android:title="Signal List" />
     <item
         android:id="@+id/SignalApiFragment"
+        android:icon="@drawable/line_graph"
         android:title="Signal API" />
     <item
         android:id="@+id/faqFragment"
