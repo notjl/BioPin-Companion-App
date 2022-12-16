@@ -9,66 +9,86 @@
             type="com.example.pd.main.PdViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".main.createupdate.SummaryFragment">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp">
 
-        <TextView
-            android:id="@+id/hertz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            tools:text="8 Hz"
-            android:text="@{viewModel.hertz.toString()}"
-            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardview_summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".main.createupdate.SummaryFragment">
 
-        <TextView
-            android:id="@+id/type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/hertz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            tools:text="brain"
-            android:text="@{viewModel.type}"
-            />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                app:layout_constraintTop_toTopOf="@id/cardview_summary"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/direction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/type"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            tools:text="left"
-            android:text="@{viewModel.direction}"
-            />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hertz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textSize="48dp"
+                    tools:text="8 Hz"
+                    android:text="@{viewModel.hertz.toString()}" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/type_summary"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    app:srcCompat="@drawable/eegxicon" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/direction_summary"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="190dp"
+                    app:srcCompat="@drawable/downx16" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="230dp"
+                    tools:text="left"
+                    android:text="@{viewModel.direction}"
+                    />
+            </RelativeLayout>
 
-        <Button
-            android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="93dp"
-            android:text="submit"
-            app:layout_constraintStart_toEndOf="@+id/back_button"
-            app:layout_constraintTop_toBottomOf="@+id/direction" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="160dp"
+                android:layout_height="140dp"
+                android:text="@string/submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cardview_summary"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
 
-        <Button
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="99dp"
-            android:text="back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/direction" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:text="@string/back"
+                app:layout_constraintStart_toStartOf="@id/submit_button"
+                app:layout_constraintBottom_toBottomOf="@id/cardview_summary"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 </layout>
