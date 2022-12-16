@@ -1,16 +1,24 @@
 package com.example.pd.login
 
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.pd.database.dao.UserDao
 import com.example.pd.database.models.User
 
 class LoginViewModel(private val userDao: UserDao): ViewModel() {
+
+    private val _firstname = MutableLiveData<String>()
+    val firstname: LiveData<String> = _firstname
+
     private fun getUser(username: String, password: String): User? = userDao.get(username, password)
 
     fun userExist(username: String, password: String): Boolean {
         val user: User? = getUser(username, password)
         if (user != null)
+            _firstname.value = user.firstName
             return true
         return false
     }

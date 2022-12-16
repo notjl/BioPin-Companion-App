@@ -36,4 +36,5 @@
     <string name="home">Home</string>
     <string name="settings">FAQ</string>
     <string name="about">About</string>
+    <string name="username_greet">Welcome! %s</string>
 </resources>
