@@ -48,7 +48,9 @@ class RegisterFragment : Fragment() {
         return viewModel.isEntryValid(
             username = binding.username.text.toString(),
             password = binding.password.text.toString(),
-            confirmPassword = binding.confirmPassword.text.toString()
+            confirmPassword = binding.confirmPassword.text.toString(),
+            firstName = binding.firstname.text.toString(),
+            surname = binding.surname.text.toString()
         )
     }
 
@@ -65,7 +67,9 @@ class RegisterFragment : Fragment() {
             if (isPasswordSimilar()) {
                 viewModel.addNewUser(
                     username = binding.username.text.toString(),
-                    password = binding.password.text.toString()
+                    password = binding.password.text.toString(),
+                    firstName = binding.firstname.text.toString(),
+                    surname = binding.surname.text.toString()
                 )
                 binding.confirmpasswordlayout.error= null
                 Toast.makeText(requireActivity(), "Added ${binding.username.text}", Toast.LENGTH_LONG).show()
