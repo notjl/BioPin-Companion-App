@@ -24,7 +24,7 @@
     <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
     <string name="login">Login</string>
-    <string name="register">Register</string>
+    <string name="register">Create an Account</string>
     <string name="signal">Signal</string>
     <string name="api">API</string>
     <string name="confirm_password">Confirm Password</string>
@@ -38,4 +38,5 @@
     <string name="about">About</string>
     <string name="create_signal">CREATE SIGNAL</string>
     <string name="username_greet">Welcome! %s</string>
+    <string name="or">OR</string>
 </resources>
