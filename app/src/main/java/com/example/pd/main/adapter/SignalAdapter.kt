@@ -1,11 +1,13 @@
 package com.example.pd.main.adapter
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pd.R
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.SignalItemBinding
 import java.util.*
@@ -23,6 +25,8 @@ class SignalAdapter(
         val direction = binding.signalDirection
         val updateButton = binding.updateButton
         val deleteButton = binding.deleteButton
+        val cardView = binding.cardView
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SignalViewHolder {
@@ -47,6 +51,12 @@ class SignalAdapter(
                 ) else it.toString()
             }
         } Direction)"
+        when (item.type) {
+            "brain" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#82E7E8"))
+            "muscle" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#8FB9AA"))
+            "eyes" -> holder.cardView.setCardBackgroundColor(Color.parseColor("#ED8975"))
+        }
+
         holder.updateButton.setOnClickListener {
             onUpdateClicked(item)
         }
