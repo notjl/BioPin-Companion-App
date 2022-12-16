@@ -7,11 +7,11 @@
     <item
         android:id="@+id/signalFragment"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="Signal List" />
+        android:title="@string/Signal_List" />
     <item
         android:id="@+id/SignalApiFragment"
         android:icon="@drawable/line_graph"
-        android:title="Signal API" />
+        android:title="@string/Signal_API" />
     <item
         android:id="@+id/faqFragment"
         android:icon="@android:drawable/ic_menu_help"
