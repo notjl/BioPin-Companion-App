@@ -25,11 +25,12 @@
 <!--            app:layout_constraintStart_toStartOf="parent"-->
 <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
+
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="184dp"
             android:scaleType="centerCrop"
             android:src="@drawable/waves"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +38,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraint_absoluteY="213dp"
+            app:layout_constraintTop_toTopOf="@id/imageView1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wave1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView3" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -87,10 +110,10 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView6"
             android:layout_width="274dp"
             android:layout_height="90dp"
             android:layout_marginTop="40dp"
@@ -111,6 +134,15 @@
             app:layout_constraintRight_toRightOf="parent"
             app:menu="@menu/bottom_nav"
             android:visibility="visible"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wave2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-34dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
