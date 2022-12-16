@@ -46,8 +46,7 @@
             android:layout_height="match_parent"
             android:id="@+id/navView"
             android:layout_gravity="start"
-            app:menu="@menu/nav_drawer"
-            android:visibility="gone"/>
+            app:menu="@menu/nav_drawer" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

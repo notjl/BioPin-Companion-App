@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/biopin_logo"
-        android:title="@string/home" />
-    <item
         android:id="@+id/signalFragment"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="Signal List" />
@@ -12,6 +8,10 @@
         android:id="@+id/SignalApiFragment"
         android:icon="@drawable/line_graph"
         android:title="Signal API" />
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/biopin_logo"
+        android:title="@string/home" />
     <item
         android:id="@+id/faqFragment"
         android:icon="@android:drawable/ic_menu_help"
