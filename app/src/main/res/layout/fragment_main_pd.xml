@@ -15,17 +15,6 @@
         tools:context=".main.MainPdFragment">
 
 
-        <TextView
-            android:id="@+id/username_greet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{@string/username_greet(viewModel.firstname)}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="523dp"
-            tools:text="Hello test" />
-
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
@@ -120,7 +109,18 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:menu="@menu/bottom_nav"
-            android:visibility="visible"/>
+            android:visibility="visible">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <TextView
+            android:id="@+id/username_greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/username_greet(viewModel.firstname)}"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="495dp"
+            tools:text="Hello test" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
