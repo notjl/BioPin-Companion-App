@@ -12,6 +12,7 @@ import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.pd.MainApplication
+import com.example.pd.R
 import com.example.pd.database.models.Signal
 import com.example.pd.databinding.FragmentHertzBinding
 import com.example.pd.main.PdViewModel
@@ -78,7 +79,8 @@ class HertzFragment : Fragment() {
             }
         }
         else {
-            Toast.makeText(requireActivity(), "Nope next", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireActivity(), "Nope next", Toast.LENGTH_LONG).show()
+            binding.hertzLayout.error = getString(R.string.missing_info)
         }
     }
 
