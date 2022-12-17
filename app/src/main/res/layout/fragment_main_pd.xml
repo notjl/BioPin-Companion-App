@@ -113,14 +113,5 @@
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <TextView
-            android:id="@+id/username_greet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{@string/username_greet(viewModel.firstname)}"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="495dp"
-            tools:text="Hello test" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

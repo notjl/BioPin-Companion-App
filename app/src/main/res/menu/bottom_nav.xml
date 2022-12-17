@@ -9,7 +9,7 @@
         android:icon="@drawable/line_graph"
         android:title="@string/Signal_API" />
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/mainPdFragment"
         android:icon="@drawable/biopin_logo"
         android:title="@string/home" />
     <item
