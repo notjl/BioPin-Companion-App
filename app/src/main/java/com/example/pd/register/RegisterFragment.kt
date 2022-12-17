@@ -41,7 +41,9 @@ class RegisterFragment : Fragment() {
         binding.registerButton.setOnClickListener {
             addNewUser()
         }
-        binding.cancelButton.setOnClickListener { goToLoginFragment() }
+        binding.cancelButton.setOnClickListener {
+            view: View -> view.findNavController().navigate(R.id.actionregisterFragmenttologinFragment)
+        }
     }
 
     private fun isEntryValid(): Boolean {
@@ -73,8 +75,7 @@ class RegisterFragment : Fragment() {
                 )
                 binding.confirmpasswordlayout.error= null
                 Toast.makeText(requireActivity(), "Added ${binding.username.text}", Toast.LENGTH_LONG).show()
-                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
-                findNavController().navigate(action)
+                view?.findNavController()?.navigate(R.id.actionregisterFragmenttologinFragment)
             }
             else {
                 binding.confirmpasswordlayout.error = getString(R.string.password_unidentical)
@@ -129,10 +130,5 @@ class RegisterFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
-    }
-
-    private fun goToLoginFragment() {
-        val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
-        findNavController().navigate(action)
     }
 }

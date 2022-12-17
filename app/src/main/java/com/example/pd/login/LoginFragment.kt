@@ -1,5 +1,6 @@
 package com.example.pd.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.util.Patterns
@@ -9,7 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.pd.MainActivity
 import com.example.pd.MainApplication
 import com.example.pd.R
 import com.example.pd.databinding.FragmentLoginBinding
@@ -38,8 +41,7 @@ class LoginFragment : Fragment() {
 
         binding.loginButton.setOnClickListener { login() }
         binding.registerButton.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
-            findNavController().navigate(action)
+            view: View -> view.findNavController().navigate(R.id.actionloginFragmenttoregisterFragment)
         }
     }
 
@@ -60,13 +62,7 @@ class LoginFragment : Fragment() {
     private fun login() {
         if (isEntryValid())
             if (userExist()) {
-                Toast.makeText(
-                    requireActivity(),
-                    "Login Success! Welcome ${binding.username.text}",
-                    Toast.LENGTH_LONG
-                ).show()
-                val action = LoginFragmentDirections.actionLoginFragmentToMainPdFragment()
-                findNavController().navigate(action)
+                startActivity(Intent(activity, MainActivity::class.java))
             } else {
                 binding.usernamelayout.error = null
                 binding.passwordlayout.error = getString(R.string.error_password)
