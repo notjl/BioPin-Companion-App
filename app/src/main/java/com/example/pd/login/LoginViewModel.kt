@@ -17,9 +17,10 @@ class LoginViewModel(private val userDao: UserDao): ViewModel() {
 
     fun userExist(username: String, password: String): Boolean {
         val user: User? = getUser(username, password)
-        if (user != null)
+        if (user != null) {
             _firstname.value = user.firstName
             return true
+        }
         return false
     }
 

@@ -105,10 +105,6 @@
         android:id="@+id/hertzFragment"
         android:name="com.example.pd.main.createupdate.HertzFragment"
         >
-    <fragment
-        android:id="@+id/hertzFragment"
-        android:name="com.example.pd.main.createupdate.HertzFragment"
-        android:label="HertzFragment" >
 
         <argument
             android:name="signal_id"
@@ -148,7 +144,6 @@
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.pd.main.createupdate.SummaryFragment"
-
         >
 
         <argument
