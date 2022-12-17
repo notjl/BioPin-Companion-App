@@ -44,12 +44,13 @@ class MainPdFragment : Fragment() {
     private fun goToSignalFragment() {
         val action = MainPdFragmentDirections.actionMainPdFragmentToSignalFragment()
         findNavController().navigate(action)
-        Toast.makeText(requireActivity(), "Go to Signal TODO", Toast.LENGTH_LONG).show()
+
     }
 
     private fun goToApiFragment() {
         val action = MainPdFragmentDirections.actionMainPdFragmentToSignalApiFragment()
         findNavController().navigate(action)
-        Toast.makeText(requireActivity(), "Go to API TODO", Toast.LENGTH_LONG).show()
+
     }
+
 }

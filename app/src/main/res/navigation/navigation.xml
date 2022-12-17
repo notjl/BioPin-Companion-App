@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.pd.register.RegisterFragment"
-        android:label="Register">
+        >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -21,6 +21,12 @@
         <action
             android:id="@+id/action_registerFragment_to_settingsFragment"
             app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signalApiFragment"
+            app:destination="@id/signalApiFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -78,7 +84,7 @@
     <fragment
         android:id="@+id/updateSignalFragment"
         android:name="com.example.pd.main.UpdateSignalFragment"
-        android:label="Update Signal">
+        >
         <argument
             android:name="signal_id"
             app:argType="integer" />

@@ -62,8 +62,6 @@
                 android:id="@+id/delete_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/delete"
@@ -81,6 +79,5 @@
                 tools:srcCompat="@drawable/eegxicon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 </layout>
