@@ -21,6 +21,12 @@
         <action
             android:id="@+id/action_registerFragment_to_settingsFragment"
             app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signalFragment"
+            app:destination="@id/signalFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signalApiFragment"
+            app:destination="@id/signalApiFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

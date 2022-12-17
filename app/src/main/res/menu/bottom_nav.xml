@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/signalFragment"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/Signal_List" />
+    <item
+        android:id="@+id/SignalApiFragment"
+        android:icon="@drawable/line_graph"
+        android:title="@string/Signal_API" />
+    <item
         android:id="@+id/homeFragment"
+        android:icon="@drawable/biopin_logo"
         android:title="@string/home" />
     <item
         android:id="@+id/faqFragment"
+        android:icon="@android:drawable/ic_menu_help"
         android:title="@string/settings" />
     <item
         android:id="@+id/aboutFragment"
-        android:title="@string/about"/>
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/about" />
 </menu>
