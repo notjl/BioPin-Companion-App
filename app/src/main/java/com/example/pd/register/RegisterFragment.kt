@@ -84,16 +84,37 @@ class RegisterFragment : Fragment() {
         else {
             var username = binding.username.text.toString()
             var password = binding.password.text.toString()
-            if(username.isEmpty()) {
+            var firstName = binding.firstname.text.toString()
+            var surname = binding.surname.text.toString()
+
+            if(firstName.isEmpty()){
+                binding.firstnameLayout.error = getString(R.string.missing_info)
+                binding.surnameLayout.error = null
+                binding.usernamelayout.error = null
+                binding.passwordlayout.error= null
+                binding.confirmpasswordlayout.error = null
+            } else if (surname.isEmpty()){
+                binding.surnameLayout.error = getString(R.string.missing_info)
+                binding.firstnameLayout.error = null
+                binding.passwordlayout.error= null
+                binding.usernamelayout.error = null
+                binding.confirmpasswordlayout.error = null
+            } else if(username.isEmpty()) {
                 binding.usernamelayout.error = getString(R.string.missing_info)
+                binding.firstnameLayout.error = null
+                binding.surnameLayout.error= null
                 binding.passwordlayout.error= null
                 binding.confirmpasswordlayout.error = null
             } else if (password.isEmpty()) {
                 binding.passwordlayout.error = getString(R.string.missing_info)
+                binding.firstnameLayout.error = null
+                binding.surnameLayout.error= null
                 binding.usernamelayout.error = null
                 binding.confirmpasswordlayout.error= null
             } else {
                 binding.confirmpasswordlayout.error = getString(R.string.missing_info)
+                binding.firstnameLayout.error = null
+                binding.surnameLayout.error= null
                 binding.passwordlayout.error= null
                 binding.usernamelayout.error = null
             }
