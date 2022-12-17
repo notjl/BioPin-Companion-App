@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/mainPdFragment"
         android:icon="@drawable/biopin_logo"
         android:title="@string/home" />
     <item
-        android:id="@+id/signalFragment"
-        android:icon="@android:drawable/ic_menu_edit"
-        android:title="Signal List" />
-    <item
-        android:id="@+id/SignalApiFragment"
-        android:icon="@drawable/line_graph"
-        android:title="Signal API" />
-    <item
-        android:id="@+id/faqFragment"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="@string/settings" />
-    <item
-        android:id="@+id/aboutFragment"
-        android:icon="@android:drawable/ic_menu_info_details"
-        android:title="@string/about" />
+        android:id="@+id/loginFragment"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/Logout" />
+    <item android:title="Functions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/signalFragment"
+                    android:icon="@android:drawable/ic_menu_edit"
+                    android:title="@string/Signal_List" />
+                <item
+                    android:id="@+id/SignalApiFragment"
+                    android:icon="@drawable/line_graph"
+                    android:title="@string/Signal_API" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Information">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/faqFragment"
+                    android:icon="@android:drawable/ic_menu_help"
+                    android:title="@string/settings" />
+                <item
+                    android:id="@+id/aboutFragment"
+                    android:icon="@android:drawable/ic_menu_info_details"
+                    android:title="@string/about" />
+            </group>
+        </menu>
+    </item>
 </menu>

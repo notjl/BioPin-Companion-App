@@ -99,11 +99,17 @@
     <fragment
         android:id="@+id/signalApiFragment"
         android:name="com.example.pd.main.SignalApiFragment"
+
         />
     <fragment
         android:id="@+id/hertzFragment"
         android:name="com.example.pd.main.createupdate.HertzFragment"
         >
+    <fragment
+        android:id="@+id/hertzFragment"
+        android:name="com.example.pd.main.createupdate.HertzFragment"
+        android:label="HertzFragment" >
+
         <argument
             android:name="signal_id"
             app:argType="integer"
@@ -115,7 +121,9 @@
     <fragment
         android:id="@+id/typeFragment"
         android:name="com.example.pd.main.createupdate.TypeFragment"
+
         >
+
         <argument
             android:name="signal_id"
             app:argType="integer"
@@ -127,6 +135,7 @@
     <fragment
         android:id="@+id/directionFragment"
         android:name="com.example.pd.main.createupdate.DirectionFragment"
+
         tools:layout="@layout/fragment_direction">
         <argument
             android:name="signal_id"
@@ -139,7 +148,9 @@
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.pd.main.createupdate.SummaryFragment"
+
         >
+
         <argument
             android:name="signal_id"
             app:argType="integer"

@@ -13,6 +13,7 @@
         android:clipChildren="false"
         android:clipToPadding="false"
         android:orientation="vertical"
+        android:background="@drawable/loginbg"
         android:padding="24dp"
         android:paddingTop="16dp"
         tools:context=".register.RegisterFragment">
@@ -141,6 +142,30 @@
                 />
 
         </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="First Name"
+            app:layout_constraintTop_toBottomOf="@+id/registerbuttonlayout"
+            tools:layout_editor_absoluteX="99dp" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="143dp"
+            android:layout_marginTop="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
