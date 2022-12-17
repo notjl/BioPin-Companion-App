@@ -57,8 +57,6 @@ class LoginFragment : Fragment() {
         )
     }
 
-
-
     private fun login() {
         if (isEntryValid())
             if (userExist()) {

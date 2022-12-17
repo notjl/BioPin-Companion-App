@@ -36,7 +36,9 @@
     <string name="home">Home</string>
     <string name="settings">FAQ</string>
     <string name="about">About</string>
+    <string name="username_greet">Welcome! %s</string>
     <string name="Signal_List">Signal List</string>
     <string name="Signal_API">Signal API</string>
     <string name="Logout">Logout</string>
+
 </resources>

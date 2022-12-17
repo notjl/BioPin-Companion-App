@@ -5,9 +5,8 @@
 
     <data>
         <variable
-            name="mainFragment"
-            type="com.example.pd.main.MainPdFragment" />
-
+            name="viewModel"
+            type="com.example.pd.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,8 +14,22 @@
         android:layout_height="match_parent"
         tools:context=".main.MainPdFragment">
 
+
+        <TextView
+            android:id="@+id/username_greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Hello test"
+            app:layout_constraintTop_toBottomOf="@id/intro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="200dp"
+            android:text="@{@string/username_greet(viewModel.firstname)}"
+            />
+            
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView1"
+
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginTop="92dp"
