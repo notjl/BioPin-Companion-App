@@ -48,9 +48,16 @@
     <string name="hertz">Hertz</string>
     <string name="next">next</string>
     <string name="back">back</string>
+<<<<<<< HEAD
     <string name="njl">Angel Cabezas</string>
     <string name="jimi">Jerome Alapad</string>
     <string name="gelo">Jan Angelo Paras</string>
     <string name="jov">Kierwin Jov Ramos</string>
+=======
+    <string name="username_greet">%s</string>
+    <string name="Signal_List">Signal List</string>
+    <string name="Signal_API">Signal API</string>
+    <string name="Logout">Logout</string>
+>>>>>>> 2eecef687a5eb86eb799a3a324eacc698a759956
 
 </resources>

@@ -9,7 +9,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.pd.MainApplication
+
 import com.example.pd.R
+
 import com.example.pd.databinding.FragmentSummaryBinding
 import com.example.pd.main.PdViewModel
 import com.example.pd.main.PdViewModelFactory
@@ -44,6 +46,7 @@ class SummaryFragment : Fragment() {
         binding.apply {
             viewModel = pdViewModel
             lifecycleOwner = viewLifecycleOwner
+
             hertz.text = pdViewModel.hertz.value.toString() + "Hz"
             when (pdViewModel.type.value) {
                 "brain" -> {
@@ -70,6 +73,7 @@ class SummaryFragment : Fragment() {
                     directionSummary.setImageResource(R.drawable.upx16)
                 }
             }
+
         }
 
         binding.backButton.setOnClickListener { findNavController().navigateUp() }
