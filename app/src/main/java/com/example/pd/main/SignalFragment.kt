@@ -45,7 +45,8 @@ class SignalFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         val signalAdapter = SignalAdapter(
             {
-                val action = SignalFragmentDirections.actionSignalFragmentToUpdateSignalFragment(it.id)
+//                val action = SignalFragmentDirections.actionSignalFragmentToUpdateSignalFragment(it.id)
+                val action = SignalFragmentDirections.actionSignalFragmentToHertzFragment(it.id)
                 this.findNavController().navigate(action)
             },
             {
@@ -63,7 +64,8 @@ class SignalFragment : Fragment() {
     }
 
     private fun goToCreateSignalFragment() {
-        val action = SignalFragmentDirections.actionSignalFragmentToCreateSignalFragment()
+//        val action = SignalFragmentDirections.actionSignalFragmentToCreateSignalFragment()
+        val action = SignalFragmentDirections.actionSignalFragmentToHertzFragment()
         findNavController().navigate(action)
     }
 
