@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/signalFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/registerFragment"
@@ -97,16 +97,12 @@
         android:name="com.example.pd.main.SignalApiFragment"
 
         />
+
+
     <fragment
         android:id="@+id/hertzFragment"
         android:name="com.example.pd.main.createupdate.HertzFragment"
         >
-
-        android:label="Signal API" />
-    <fragment
-        android:id="@+id/hertzFragment"
-        android:name="com.example.pd.main.createupdate.HertzFragment"
-        android:label="HertzFragment" >
 
         <argument
             android:name="signal_id"
