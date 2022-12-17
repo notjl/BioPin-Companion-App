@@ -183,7 +183,6 @@
                         android:drawableTop="@drawable/rightx16"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:layout_marginEnd="10dp"
                         android:textAlignment="center"
                         android:text="@string/right"
                         android:textSize="14sp"/>
@@ -215,7 +214,6 @@
                         android:text="@string/cancel" />
 
                 </RelativeLayout>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

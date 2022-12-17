@@ -45,5 +45,7 @@
     <string name="or">OR</string>
     <string name="first_name">First Name</string>
     <string name="surname">Surname</string>
->>>>>>> origin/jimi-test
+    <string name="hertz">Hertz</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
 </resources>
