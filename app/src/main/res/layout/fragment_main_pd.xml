@@ -77,15 +77,15 @@
             android:id="@+id/intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="@{@string/username_greet(viewModel.firstname)}"
-
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/biopin_title"
-            app:layout_constraintTop_toBottomOf="@+id/biopin_title" />
+            app:layout_constraintTop_toBottomOf="@+id/biopin_title"
+            tools:text="Hello test" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/biopin_title"
@@ -102,12 +102,11 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView4"
-            android:layout_width="115dp"
-            android:layout_height="404dp"
+            android:layout_width="118dp"
+            android:layout_height="134dp"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="256dp"
-            app:layout_constraintBottom_toTopOf="@+id/username_greet"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/biopin_logo" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
