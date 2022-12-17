@@ -19,5 +19,19 @@
         <action
             android:id="@+id/actionregisterFragmenttologinFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_aboutFragment2"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_faqFragment2"
+            app:destination="@id/faqFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.pd.menu.FaqFragment"
+        android:label="FaqFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.pd.menu.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>
