@@ -78,4 +78,5 @@
             app:menu="@menu/bottom_nav"
             android:visibility="visible"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
