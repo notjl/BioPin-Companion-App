@@ -4,8 +4,12 @@
         android:id="@+id/mainPdFragment"
         android:icon="@drawable/biopin_logo"
         android:title="@string/home" />
+    <item
+        android:id="@+id/loginFragment"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/Logout" />
     <item android:title="Functions">
-        <menu
+        <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/signalFragment"
@@ -16,18 +20,20 @@
                     android:icon="@drawable/line_graph"
                     android:title="@string/Signal_API" />
             </group>
-        </menu
+        </menu>
     </item>
-    <item
-        android:id="@+id/faqFragment"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="@string/settings" />
-    <item
-        android:id="@+id/aboutFragment"
-        android:icon="@android:drawable/ic_menu_info_details"
-        android:title="@string/about" />
-    <item
-        android:id="@+id/loginFragment"
-        android:icon="@android:drawable/ic_menu_revert"
-        android:title="@string/Logout" />
+    <item android:title="Information">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/faqFragment"
+                    android:icon="@android:drawable/ic_menu_help"
+                    android:title="@string/settings" />
+                <item
+                    android:id="@+id/aboutFragment"
+                    android:icon="@android:drawable/ic_menu_info_details"
+                    android:title="@string/about" />
+            </group>
+        </menu>
+    </item>
 </menu>
