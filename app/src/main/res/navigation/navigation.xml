@@ -101,6 +101,8 @@
         android:name="com.example.pd.main.SignalApiFragment"
 
         />
+
+
     <fragment
         android:id="@+id/hertzFragment"
         android:name="com.example.pd.main.createupdate.HertzFragment"
