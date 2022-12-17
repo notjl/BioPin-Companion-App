@@ -41,7 +41,6 @@
     <string name="faq1">What is the name of your company?\nBioMotive is the name of the company, a portmanteau of biopotential and motive meaning motion through biopotential</string>
     <string name="faq2">What is the name of your project?\nBioPIn, it means Biopotential Integration</string>
     <string name="faq3">How the application works?\nThe application has 2 features, First it has a crud system where users can create, read, update and delete signal types that can help to improve the CNN model of the project design. Second it can fetch and display signal data so users can to monitor their signal data and adjust their wheelchair control based on the information provided</string>
-
-
+    <string name="faqtitle">FAQ</string>
 
 </resources>

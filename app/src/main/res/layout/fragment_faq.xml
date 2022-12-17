@@ -20,7 +20,8 @@
             android:fitsSystemWindows="true"
             app:contentScrim="@color/twofive"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="FAQ"
+            app:title="@string/faqtitle"
+            app:expandedTitleTextColor="@color/white"
             android:background="@drawable/faqbg"
             android:id="@+id/collapsing_toolbar">
 
