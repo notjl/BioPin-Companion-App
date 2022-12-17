@@ -7,6 +7,112 @@
 
     </data>
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardview_direction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".main.DirectionFragment">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/signal_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/direction"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="@id/cardview_direction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/direction_option"
+                android:checkedButton="@id/forward_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/signal_direction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/forward_option"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_radio_selector"
+                    android:button="@color/transparent"
+                    android:drawableTop="@drawable/upx16"
+                    android:text="@string/forward"
+                    android:textAlignment="center"
+                    android:textSize="14sp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/backward_option"
+                    android:button="@color/transparent"
+                    android:background="@drawable/custom_radio_selector"
+                    android:drawableTop="@drawable/downx16"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginEnd="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/backward"
+                    android:textSize="14sp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/left_option"
+                    android:button="@color/transparent"
+                    android:background="@drawable/custom_radio_selector"
+                    android:drawableTop="@drawable/leftx16"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginEnd="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/left"
+                    android:textSize="14sp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/right_option"
+                    android:button="@color/transparent"
+                    android:background="@drawable/custom_radio_selector"
+                    android:drawableTop="@drawable/rightx16"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:textAlignment="center"
+                    android:text="@string/right"
+                    android:textSize="14sp"/>
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                app:layout_constraintTop_toBottomOf="@id/direction_option"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                app:layout_constraintTop_toBottomOf="@id/direction_option"
+                app:layout_constraintEnd_toStartOf="@id/next_button"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -74,4 +180,5 @@
             app:layout_constraintTop_toBottomOf="@+id/direction_option" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

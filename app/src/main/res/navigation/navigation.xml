@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.pd.register.RegisterFragment"
-        android:label="Register">
+        >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.pd.login.LoginFragment"
-        android:label="Login">
+        >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -42,19 +42,19 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.pd.menu.AboutFragment"
-        android:label="About" />
+        />
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.pd.menu.HomeFragment"
-        android:label="Home" />
+        />
     <fragment
         android:id="@+id/faqFragment"
         android:name="com.example.pd.menu.FaqFragment"
-        android:label="FAQ" />
+        />
     <fragment
         android:id="@+id/mainPdFragment"
         android:name="com.example.pd.main.MainPdFragment"
-        android:label="Home">
+        >
         <action
             android:id="@+id/action_mainPdFragment_to_signalFragment"
             app:destination="@id/signalFragment" />
@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/signalFragment"
         android:name="com.example.pd.main.SignalFragment"
-        android:label="Signal List">
+        >
         <action
             android:id="@+id/action_signalFragment_to_createSignalFragment"
             app:destination="@id/createSignalFragment" />
@@ -79,7 +79,6 @@
     <fragment
         android:id="@+id/createSignalFragment"
         android:name="com.example.pd.main.CreateSignalFragment"
-        android:label="Create Signal"
         tools:layout="@layout/fragment_create_signal">
         <action
             android:id="@+id/action_createSignalFragment_to_signalFragment"
@@ -88,7 +87,7 @@
     <fragment
         android:id="@+id/updateSignalFragment"
         android:name="com.example.pd.main.UpdateSignalFragment"
-        android:label="Update Signal">
+        >
         <argument
             android:name="signal_id"
             app:argType="integer" />
@@ -96,11 +95,19 @@
     <fragment
         android:id="@+id/signalApiFragment"
         android:name="com.example.pd.main.SignalApiFragment"
+
+        />
+    <fragment
+        android:id="@+id/hertzFragment"
+        android:name="com.example.pd.main.createupdate.HertzFragment"
+        >
+
         android:label="Signal API" />
     <fragment
         android:id="@+id/hertzFragment"
         android:name="com.example.pd.main.createupdate.HertzFragment"
         android:label="HertzFragment" >
+
         <argument
             android:name="signal_id"
             app:argType="integer"
@@ -112,7 +119,9 @@
     <fragment
         android:id="@+id/typeFragment"
         android:name="com.example.pd.main.createupdate.TypeFragment"
-        android:label="TypeFragment">
+
+        >
+
         <argument
             android:name="signal_id"
             app:argType="integer"
@@ -124,7 +133,7 @@
     <fragment
         android:id="@+id/directionFragment"
         android:name="com.example.pd.main.createupdate.DirectionFragment"
-        android:label="fragment_direction"
+
         tools:layout="@layout/fragment_direction">
         <argument
             android:name="signal_id"
@@ -137,7 +146,9 @@
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.pd.main.createupdate.SummaryFragment"
-        android:label="SummaryFragment">
+
+        >
+
         <argument
             android:name="signal_id"
             app:argType="integer"

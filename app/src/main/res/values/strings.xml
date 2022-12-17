@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">PD</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">BioPin Companion</string>
+    <string name="header_name">BioPin Companion</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_password">User does not exist or wrong password</string>
     <string name="missing_info">Missing Information</string>
@@ -24,18 +24,30 @@
     <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
     <string name="login">Login</string>
-    <string name="register">Register</string>
+    <string name="register">Create an Account</string>
     <string name="signal">Signal</string>
     <string name="api">API</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="how_to_use">How to use:</string>
-    <string name="create_create_brain_signal_direction_nupdate_update_brain_signal_direction_ndelete_delete_brain_signal_direction_ndsiplay_display_all_brain_signal_direction">Create = Create Brain Signal / Direction\nUpdate = Update Brain Signal / Direction\nDelete = Delete Brain Signal / Direction\nDsiplay = Display All Brain Signal / Direction</string>
+    <string name="create_create_brain_signal_direction_nupdate_update_brain_signal_direction_ndelete_delete_brain_signal_direction_ndsiplay_display_all_brain_signal_direction">Create = Create Brain Signal / Direction\nUpdate = Update Brain Signal / Direction\nDelete = Delete Brain Signal / Direction\nDisplay = Display All Brain Signal / Direction</string>
     <string name="create">Create</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="home">Home</string>
     <string name="settings">FAQ</string>
     <string name="about">About</string>
+    <string name="create_signal">CREATE SIGNAL</string>
+    <string name="username_greet">Welcome! %s</string>
+    <string name="faq1">What is the name of your company?\nBioMotive is the name of the company, a portmanteau of biopotential and motive meaning motion through biopotential</string>
+    <string name="faq2">What is the name of your project?\nBioPIn, it means Biopotential Integration</string>
+    <string name="faq3">How the application works?\nThe application has 2 features, First it has a crud system where users can create, read, update and delete signal types that can help to improve the CNN model of the project design. Second it can fetch and display signal data so users can to monitor their signal data and adjust their wheelchair control based on the information provided</string>
+    <string name="faqtitle">FAQ</string>
+    <string name="or">OR</string>
+    <string name="first_name">First Name</string>
+    <string name="surname">Surname</string>
+    <string name="hertz">Hertz</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
     <string name="username_greet">%s</string>
     <string name="Signal_List">Signal List</string>
     <string name="Signal_API">Signal API</string>

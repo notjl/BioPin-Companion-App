@@ -19,19 +19,55 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageLogo"
-            android:layout_width="260dp"
-            android:layout_height="260dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentStart="true"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp"
+            app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/biopin_logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstname_layout"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageLogo"
+            app:layout_constraintStart_toStartOf="@id/usernamelayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstname"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/first_name"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/surname_layout"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageLogo"
+            app:layout_constraintEnd_toEndOf="@id/usernamelayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/surname"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/surname"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usernamelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/imageLogo"
+            app:layout_constraintTop_toBottomOf="@id/firstname_layout"
             android:layout_margin="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -106,6 +142,7 @@
 
         </RelativeLayout>
 
+
         <EditText
             android:id="@+id/firstname"
             android:layout_width="wrap_content"
@@ -128,6 +165,7 @@
             android:text="Surname"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/firstname" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
