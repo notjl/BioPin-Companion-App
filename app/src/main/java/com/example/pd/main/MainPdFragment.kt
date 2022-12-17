@@ -36,7 +36,6 @@ class MainPdFragment : Fragment() {
             viewModel = sharedViewModel
             lifecycleOwner = viewLifecycleOwner
         }
-
         binding.signalButton.setOnClickListener { goToSignalFragment() }
         binding.apiButton.setOnClickListener { goToApiFragment() }
     }

@@ -19,7 +19,6 @@
     <string name="backward">Backward</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
-    <string name="a_localized_solution_for_motorized_wheelchairs_catered_to_patients_with_severe_motor_and_dexterity_problems_with_a_biopotential_control_system_that_enables_independent_mobility_of_the_patients">A localized solution for motorized wheelchairs catered to patients with severe motor and dexterity problems with a biopotential control system that enables independent mobility of the patients.</string>
     <string name="biopin_logo">BIOPIN LOGO</string>
     <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
@@ -44,4 +43,5 @@
     <string name="hertz">Hertz</string>
     <string name="next">next</string>
     <string name="back">back</string>
+    <string name="biopin_companion_app">BioPin Companion App</string>
 </resources>

@@ -16,7 +16,7 @@
             android:id="@+id/imageView"
             android:layout_width="276dp"
             android:layout_height="161dp"
-            android:layout_marginTop="148dp"
+            android:layout_marginTop="60dp"
             android:src="@drawable/biopin_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -25,29 +25,27 @@
             android:contentDescription="@string/biopin_logo" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/texthome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/a_localized_solution_for_motorized_wheelchairs_catered_to_patients_with_severe_motor_and_dexterity_problems_with_a_biopotential_control_system_that_enables_independent_mobility_of_the_patients"
+            android:text="@string/biopin_companion_app"
+            android:textSize="24sp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageView" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation_view"
-            android:layout_width="0dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bottom_nav"
-            android:visibility="visible"/>
+            app:layout_constraintTop_toBottomOf="@id/texthome"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="@string/login"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
