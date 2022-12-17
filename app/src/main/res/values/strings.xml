@@ -48,4 +48,9 @@
     <string name="hertz">Hertz</string>
     <string name="next">next</string>
     <string name="back">back</string>
+    <string name="username_greet">%s</string>
+    <string name="Signal_List">Signal List</string>
+    <string name="Signal_API">Signal API</string>
+    <string name="Logout">Logout</string>
+
 </resources>

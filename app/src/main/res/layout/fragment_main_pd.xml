@@ -14,48 +14,36 @@
         android:layout_height="match_parent"
         tools:context=".main.MainPdFragment">
 
-        <TextView
-            android:id="@+id/username_greet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Hello test"
-            app:layout_constraintTop_toBottomOf="@id/intro"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="200dp"
-            android:text="@{@string/username_greet(viewModel.firstname)}"
-            />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background=" #00B4D8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="92dp"
             android:scaleType="centerCrop"
             android:src="@drawable/waves"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/intro"
-            android:layout_marginTop="120dp"
-            android:gravity="center">
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/signal_button"
@@ -75,38 +63,37 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/intro"
-            android:layout_width="274dp"
-            android:layout_height="155dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="68dp"
-            android:text="A companion app for Biomotive's wheelchair kit, BioPIn is a valuable tool for individuals with mobility impairments as it allows them to easily monitor and improve the control of their wheelchair. "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{@string/username_greet(viewModel.firstname)}"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/biopin_title" />
+            app:layout_constraintStart_toStartOf="@+id/biopin_title"
+            app:layout_constraintTop_toBottomOf="@+id/biopin_title"
+            tools:text="Hello test" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/biopin_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="76dp"
             android:text="Welcome to BioPin"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView3"
-            android:layout_width="274dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="68dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imageView4"
+            android:layout_width="118dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/biopin_logo" />
 
@@ -121,7 +108,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:menu="@menu/bottom_nav"
-            android:visibility="visible"/>
+            android:visibility="visible">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
