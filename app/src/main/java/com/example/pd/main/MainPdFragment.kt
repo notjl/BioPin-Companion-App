@@ -1,5 +1,6 @@
 package com.example.pd.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,7 +10,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.pd.MainActivity
 import com.example.pd.MainApplication
+import com.example.pd.NonavActivity
 import com.example.pd.databinding.FragmentMainPdBinding
 import com.example.pd.login.LoginViewModel
 import com.example.pd.login.LoginViewModelFactory
@@ -33,6 +36,7 @@ class MainPdFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.signalButton.setOnClickListener { goToSignalFragment() }
         binding.apiButton.setOnClickListener { goToApiFragment() }
+        binding.logoutButton.setOnClickListener { activity?.finish() }
     }
 
     private fun goToSignalFragment() {
@@ -46,5 +50,6 @@ class MainPdFragment : Fragment() {
         findNavController().navigate(action)
 
     }
+
 
 }
