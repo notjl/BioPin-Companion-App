@@ -31,11 +31,6 @@ class MainPdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding?.apply {
-            viewModel = sharedViewModel
-            lifecycleOwner = viewLifecycleOwner
-        }
         binding.signalButton.setOnClickListener { goToSignalFragment() }
         binding.apiButton.setOnClickListener { goToApiFragment() }
     }
