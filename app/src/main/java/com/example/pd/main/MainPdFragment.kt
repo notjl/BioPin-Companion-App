@@ -36,7 +36,6 @@ class MainPdFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.signalButton.setOnClickListener { goToSignalFragment() }
         binding.apiButton.setOnClickListener { goToApiFragment() }
-        binding.logoutButton.setOnClickListener { activity?.finish() }
     }
 
     private fun goToSignalFragment() {
