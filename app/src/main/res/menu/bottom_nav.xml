@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/signalFragment"
+        android:id="@+id/menu_signal"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="@string/Signal_List" />
+        android:title="@string/Signal_List"
+        android:enabled="true"/>
     <item
-        android:id="@+id/SignalApiFragment"
+        android:id="@+id/menu_api"
         android:icon="@drawable/line_graph"
-        android:title="@string/Signal_API" />
+        android:title="@string/Signal_API"
+        android:enabled="true"/>
     <item
-        android:id="@+id/mainPdFragment"
+        android:id="@+id/menu_pd"
         android:icon="@drawable/biopin_logo"
-        android:title="@string/home" />
+        android:title="@string/home"
+        android:enabled="true"/>
     <item
-        android:id="@+id/faqFragment"
+        android:id="@+id/menu_faq"
         android:icon="@android:drawable/ic_menu_help"
-        android:title="@string/settings" />
+        android:title="@string/settings"
+        android:enabled="true"/>
     <item
-        android:id="@+id/aboutFragment"
+        android:id="@+id/menu_about"
         android:icon="@android:drawable/ic_menu_info_details"
-        android:title="@string/about" />
+        android:title="@string/about"
+        android:enabled="true"/>
 </menu>

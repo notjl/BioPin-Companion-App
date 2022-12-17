@@ -5,7 +5,7 @@
         android:icon="@drawable/biopin_logo"
         android:title="@string/home" />
     <item
-        android:id="@+id/loginFragment"
+        android:id="@+id/logout"
         android:icon="@android:drawable/ic_menu_revert"
         android:title="@string/Logout" />
     <item android:title="Functions">
